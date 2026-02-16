@@ -1,2 +1,36 @@
+# =========================
+# Environment
+# =========================
 .env
-data/mariadb/*
+.env.*
+!.env.example
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# Volumi locali (se mai usati bind mount)
+data/
+db/
+mysql/
+mariadb/
+storage/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+*.swp
