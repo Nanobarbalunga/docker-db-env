@@ -3,14 +3,14 @@ version: "3.9"
 services:
   mariadb:
     image: mariadb:${MARIADB_VERSION:-11}
-    container_name: ${MARIADB_CONTAINER_NAME:-mariadb}
+    container_name: ${MARIADB_CONTAINER_NAME:-my-mariadb}
     restart: unless-stopped
 
     environment:
-      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-rootpass}
-      MARIADB_DATABASE: ${MARIADB_DATABASE:-appdb}
-      MARIADB_USER: ${MARIADB_USER:-appuser}
-      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-apppass}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-supersecret}
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-mydatabase}
+      MARIADB_USER: ${MARIADB_USER:-myuser}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-mypassword}
       TZ: ${TZ:-Europe/Rome}
 
     ports:

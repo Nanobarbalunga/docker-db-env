@@ -32,13 +32,16 @@ docker compose up -d
 - MariaDB: 127.0.0.1:3306
 - phpMyAdmin: 127.0.0.1:8081
 
+
 ## 🔑 Accesso interattivo
+
+/// Assunto che MARIADB_CONTAINER_NAME sia my-mariadb
 
 ```bash
 docker exec -it my-mariadb bash
 ```
 
-### Per entrare nella shell di mariadb
+### Per entrare nella shell di mariadb come root
 
 ```bash
 docker exec -it my-mariadb mariadb -u root -p
@@ -49,6 +52,27 @@ o direttamente da dentro il container
 ```bash
 mariadb -u root -p
 ```
+
+### Per entrare nella shell di mariadb come utente (esempio `myuser` per MARIADB_USER )
+
+```bash
+docker exec -it my-mariadb mariadb -u myuser -p
+```
+
+o direttamente da dentro il container
+
+```bash
+mariadb -u myuser -p
+```
+
+### Come credenziali usare le variabili di ambiente
+
+| Variabile | Valore di default |
+| --- | --- |
+| MARIADB_ROOT_PASSWORD | supersecret |
+| MARIADB_DATABASE | mydatabase |
+| MARIADB_USER | myuser |
+| MARIADB_PASSWORD | mypassword |
 
 ## ⛔ Stop
 
