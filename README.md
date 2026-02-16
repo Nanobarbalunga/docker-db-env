@@ -4,7 +4,7 @@ Ambiente Docker semplice per avviare:
 
 - MariaDB
 - phpMyAdmin
-- Connessione esterna tramite MySQL Workbench
+- Connessione esterna tramite MySQL Workbench o equivalente
 
 ---
 
@@ -18,3 +18,55 @@ Verifica:
 ```bash
 docker --version
 docker compose version
+
+```
+
+## 🚀 Avvio
+
+```bash
+docker compose up -d
+```
+
+## 📡 Accesso
+
+- MariaDB: 127.0.0.1:3306
+- phpMyAdmin: 127.0.0.1:8081
+
+## 🔑 Accesso interattivo
+
+```bash
+docker exec -it my-mariadb bash
+```
+
+## ⛔ Stop
+
+```bash
+docker compose down
+```
+
+## 📝 Note
+
+- É possibile utilizzare il file `.env` per configurare le variabili di ambiente
+- I valori di default sono definiti nel file `.env.example`
+- Quando si fa riferimento al nome dell'immagine o la porta si utilizza il valore definito nel file `.env`
+
+## 🔧 Variabili di ambiente
+
+| Variabile | Descrizione | Valore di default |
+| --- | --- | --- |
+| MARIADB_VERSION | Versione di MariaDB | 11.4 |
+| PHPMYADMIN_VERSION | Versione di phpMyAdmin | latest |
+| MARIADB_CONTAINER_NAME | Nome del container di MariaDB | my-mariadb |
+| PHPMYADMIN_CONTAINER_NAME | Nome del container di phpMyAdmin | my-phpmyadmin |
+| MARIADB_HOST_PORT | Porta esposta del container di MariaDB | 3306 |
+| PHPMYADMIN_HOST_PORT | Porta esposta del container di phpMyAdmin | 8081 |
+| MARIADB_ROOT_PASSWORD | Password di root per MariaDB | supersecret | 
+| MARIADB_DATABASE | Nome del database | mydatabase |
+| MARIADB_USER | Nome utente per MariaDB | myuser |
+| MARIADB_PASSWORD | Password per MariaDB | mypassword |
+| PHPMYADMIN_UPLOAD_LIMIT | Limite di caricamento per phpMyAdmin | 64M |
+| TZ | Timezone | Europe/Rome |
+
+## 📜 License
+
+[License](LICENSE)
