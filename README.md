@@ -38,6 +38,18 @@ docker compose up -d
 docker exec -it my-mariadb bash
 ```
 
+### Per entrare nella shell di mariadb
+
+```bash
+docker exec -it my-mariadb mariadb -u root -p
+```
+
+o direttamente da dentro il container
+
+```bash
+mariadb -u root -p
+```
+
 ## ⛔ Stop
 
 ```bash
