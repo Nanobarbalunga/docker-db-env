@@ -38,8 +38,8 @@ services:
       PMA_HOST: ${PMA_HOST:-mariadb}
       PMA_PORT: ${PMA_PORT:-3306}
       TZ: ${TZ:-Europe/Rome}
-      PMA_USER: ${MARIADB_USER:-appuser}
-      PMA_PASSWORD: ${MARIADB_PASSWORD:-apppass}
+      #PMA_USER: ${MARIADB_USER:-myuser}
+      #PMA_PASSWORD: ${MARIADB_PASSWORD:-mypassword}
       UPLOAD_LIMIT: ${PHPMYADMIN_UPLOAD_LIMIT:-64M}
     ports:
       - "${PHPMYADMIN_HOST_PORT:-8080}:80"

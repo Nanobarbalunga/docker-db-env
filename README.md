@@ -84,6 +84,7 @@ docker compose down
 - É possibile utilizzare il file `.env` per configurare le variabili di ambiente
 - I valori di default sono definiti nel file `.env.example`
 - Quando si fa riferimento al nome dell'immagine o la porta si utilizza il valore definito nel file `.env`
+- Se si vuole utilizzare l'accesso automatico dentro il pannello phpMyAdmin si puo' utilizzare il file `.env` e decommentare le righe 'PMA_USER' e 'PMA_PASSWORD'
 
 ## 🔧 Variabili di ambiente
 
@@ -95,7 +96,7 @@ docker compose down
 | PHPMYADMIN_CONTAINER_NAME | Nome del container di phpMyAdmin | my-phpmyadmin |
 | MARIADB_HOST_PORT | Porta esposta del container di MariaDB | 3306 |
 | PHPMYADMIN_HOST_PORT | Porta esposta del container di phpMyAdmin | 8081 |
-| MARIADB_ROOT_PASSWORD | Password di root per MariaDB | supersecret | 
+| MARIADB_ROOT_PASSWORD | Password di root per MariaDB | supersecret |
 | MARIADB_DATABASE | Nome del database | mydatabase |
 | MARIADB_USER | Nome utente per MariaDB | myuser |
 | MARIADB_PASSWORD | Password per MariaDB | mypassword |
