@@ -34,7 +34,7 @@ docker compose up -d
 
 ## 🔑 Accesso interattivo
 
-> Assunto che MARIADB_CONTAINER_NAME sia my-mariadb
+> Assunto che MARIADB_CONTAINER_NAME = 'my-mariadb'
 
 ```bash
 docker exec -it my-mariadb bash
