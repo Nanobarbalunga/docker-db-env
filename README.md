@@ -32,10 +32,9 @@ docker compose up -d
 - MariaDB: 127.0.0.1:3306
 - phpMyAdmin: 127.0.0.1:8081
 
-
 ## 🔑 Accesso interattivo
 
-/// Assunto che MARIADB_CONTAINER_NAME sia my-mariadb
+> Assunto che MARIADB_CONTAINER_NAME sia my-mariadb
 
 ```bash
 docker exec -it my-mariadb bash
